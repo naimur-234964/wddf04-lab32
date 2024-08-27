@@ -1,0 +1,333 @@
+/* common codes start */
+:root {
+    --primary-color: #87D37C;
+    --secondary-color: #FDFAFA;
+    --light-color: #FEFBFC;
+    --dark-color: #040404;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    min-width: 360px;
+}
+
+.title-block h3 {
+    color: var(--dark-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.title-block p {
+    color: var(--dark-color);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+/* common codes end */
+
+/* header section start */
+#header {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/banner.jpg) no-repeat;
+    background-size: cover;
+}
+
+/* navbar section start */
+#navbar .nav-link,
+#navbar .dropdown-item {
+    padding: var(--bs-nav-link-padding-y) 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--light-color);
+    text-transform: uppercase;
+
+    &.active {
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+#navbar .dropdown-menu {
+    --bs-dropdown-bg: : transparent;
+}
+
+.nav-active {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+/* navbar section end */
+
+/* carousel section start */
+
+#myCarousel h1 span {
+    color: var(--primary-color);
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+
+    &.active {
+        background-color: var(--primary-color);
+    }
+}
+
+/* carousel section end */
+/* header section end */
+
+/* about_us section start */
+#about_us {}
+
+.about-content a {
+    color: var(--dark-color);
+    text-decoration: none;
+    transition: .3s linear;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+
+
+/* about_us section end */
+
+/* services section start */
+.service-content {
+    background: rgba(0, 0, 0, .6);
+    /* opacity: 0; */
+
+    &:hover .service-overlay {
+        opacity: 1;
+    }
+}
+
+.service-overlay {
+    background: rgba(0, 0, 0, .5);
+    opacity: 0;
+    transition: .5s;
+}
+
+.service-overlay a {
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    padding: 10px 12px;
+    border-radius: 50%;
+    margin: 5px;
+    transition: .3s;
+
+    &:hover {
+        background: var(--primary-color);
+        border: 1px solid var(--primary-color);
+    }
+}
+
+/* services section end */
+
+/* portfolio section start */
+.portfolio-links ul li a {
+    background: var(--dark-color);
+    transition: .3s;
+
+    &:hover {
+        background: var(--primary-color);
+    }
+    &.active {
+        background: var(--primary-color);
+    }
+}
+
+.portfolio-content {
+    background: rgba(0, 0, 0, .8);
+    /* opacity: 0; */
+
+    &:hover .portfolio-overlay {
+        opacity: 1;
+    }
+}
+
+.portfolio-overlay {
+    background: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: .5s;
+}
+
+.portfolio-overlay a {
+    color: var(--light-color);
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+#portfolio .nav-link {   
+    color: var(--light-color);
+    background: var(--dark-color);
+
+    &:hover{
+        background: var(--primary-color);
+    }
+
+    &.active{
+        background: var(--primary-color);
+    }
+}
+#portfolio .nav-pills .nav-link {
+    border-radius: 0;
+}
+/* portfolio section end */
+
+/* pricing section start */
+.pricing-content {
+    background: var(--dark-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s;
+
+    &:hover {
+        background: var(--primary-color);
+
+        & .pricing-header {
+            background: var(--light-color);
+            color: var(--primary-color);
+        }
+    }
+}
+
+.pricing-header {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    transition: .5s;
+
+    & h3 {
+        font-size: 30px;
+    }
+
+    & h3 sup {
+        top: -.7em;
+        font-size: 14px;
+    }
+
+    & h3 sub {
+        font-size: 20px;
+    }
+}
+
+.pricing-body {
+    & li {
+        margin-top: 20px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--light-color);
+    }
+
+    & li p {
+        margin: 0;
+    }
+
+    & li a {
+        background: var(--light-color);
+        color: var(--dark-color);
+        transition: .5s;
+
+        &:hover {
+            color: var(--primary-color);
+        }
+    }
+
+    & li:last-child {
+        padding-top: 20px;
+        border-bottom: 0px solid transparent;
+    }
+}
+
+/* pricing section end */
+
+/* Counter Section Start */
+#counter {
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/works.jpg) no-repeat;
+    background-size: cover;
+    color: var(--light-color);
+}
+
+.counter-card {
+    margin: 0;
+    border: 1px solid var(--light-color);
+    padding: 20px;
+    box-sizing: border-box;
+    /* margin: 0px 20px; */
+}
+
+/* Counter Section End */
+
+/* Form Section Start */
+#form_section {
+    background: var(--bs-light);
+    transition: .5s;
+}
+
+#form_section button {
+    color: var(--dark-color);
+    background: var(--light-color);
+    border: 1px solid var(--dark-color);
+    border-radius: 0;
+    padding: 5px 15px;
+    margin-top: 5px;
+}
+
+#form_section button:hover {
+    color: var(--light-color);
+    background: var(--primary-color);
+    border: none;
+}
+
+/* Form Section End */
+
+/* Map Section Start */
+#map iframe {
+    height: 300px;
+    width: 100%;
+    border: none;
+}
+
+/* Map Section End */
+
+/* Footer Section Start */
+.footer-text p a {
+    color: var(--light-color);
+    transition: .5s;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+.footer-links a {
+    font-size: 20px;
+    color: var(--light-color);
+    margin-left: 10px;
+    text-decoration: none;
+    transition: .5s;
+
+    &:hover {
+        color: var(--primary-color);
+    }
+}
+
+/* Footer Section End */
